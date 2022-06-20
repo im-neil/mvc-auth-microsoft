@@ -10,8 +10,6 @@ const homeRoutes = require('./routes/home')
 const todoRoutes = require('./routes/todos')
 
 require('dotenv').config({ path: './config/.env' })
-
-// Passport config
 require('./config/passport')(passport)
 
 connectDB()
@@ -24,7 +22,7 @@ app.use(express.json())
 // Sessions
 app.use(
   session({
-    secret: 'keyboard cat',
+    secret: '2zTT9ts!3oY',
     resave: false,
     saveUninitialized: false,
     store: new MongoStore({ mongooseConnection: mongoose.connection }),
